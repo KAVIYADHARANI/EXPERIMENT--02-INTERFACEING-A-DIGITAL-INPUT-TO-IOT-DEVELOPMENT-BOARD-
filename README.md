@@ -78,6 +78,25 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 ## STM 32 CUBE PROGRAM :
 ```
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include"stdbool.h"
 bool IRSENSOR;
@@ -156,9 +175,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
 	  IRPAIR();
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -178,7 +195,6 @@ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
 HAL_Delay(1000);
 }
 }
-
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -285,17 +301,23 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
 ```
 
 
 
 ## Output  :
 
-<img width="500" height="395" alt="image" src="https://github.com/user-attachments/assets/8069cd80-295b-44c6-b4d2-be90a94215e4" />
+### Obstacle Not Detected
+
+![WhatsApp Image 2025-09-27 at 19 16 42_8ee660e4](https://github.com/user-attachments/assets/ef007e71-aee7-4575-a70d-c2763b554847)
+
+
+### Obstacle Detected
 
  
- 
+ ![WhatsApp Image 2025-09-27 at 19 16 41_27881496](https://github.com/user-attachments/assets/50cd1050-7953-44bc-ba6a-02fca4bf4480)
+
  
 ## Result :
 Interfacing a digital Input (ir pair) with ARM microcontroller based IOT development is executed and the results are verified.
